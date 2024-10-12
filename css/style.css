@@ -1,0 +1,701 @@
+    /* Google Fonts */
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      text-decoration: none;
+      scroll-behavior: smooth;
+      scroll-padding-top: 2rem;
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      
+    }
+    :root{
+      --primary-color:rgb(247, 247, 247);
+      --secondary-color: #1b1b1b;
+      --pox: #363636;
+
+      --big-font: 3.2rem;
+      --medium-font: 1.8rem;
+      --p-font: 0.941rem;
+    }
+    .dark-theme{
+      --primary-color:#131313;
+      --secondary-color: rgb(247, 247, 247);
+      --thirdy-color: #181818;
+      --hover: #747474;
+      --pox: #cecece;
+    
+      --big-font: 3.2rem;
+      --medium-font: 1.8rem;
+      --p-font: 0.941rem;
+    }
+    #icon{
+      width: 25px;
+      cursor: pointer;
+    }
+    section {
+      padding: 40px 10%;
+    }
+    body.active {
+      --text-color: var(--secondary-color);
+      --bg-color: var(--primary-color);
+    }
+    body {
+      background: var(--primary-color);
+      color: var(--secondary-color);
+    }
+    *::selection {
+      color: var(--primary-color);
+      background: var(--secondary-color);
+    }
+    .heading {
+      text-align: center;
+      margin-top: 10%;
+    }
+    .heading h2 {
+      font-size: 74px;
+      text-align: center;
+    }
+    .heading2 h2 {
+      font-size: 75px;
+    }
+    .heading2 span {
+      font-size: 15;
+      color: var(--secondary-color);
+    }
+    .experience .year {
+      font-size: 50px;
+      text-align: center;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .arrows-body {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .arrow {
+      position: inherit;
+      width: 50px;
+      height: 50px;
+      border-top: 12px solid #fff;
+      border-left: 12px solid #fff;
+      transform: rotate(-315deg);
+    }
+    .container {
+      max-width: 1200px; /* Set a maximum width for the main container */
+      width: 90%; /* Adjust this as necessary */
+      margin: auto; /* Center the container */
+    }
+    
+    .coloryear .container {
+      border: 12px solid rgb(255, 255, 255);
+      width: 70%; /* Decrease the width */
+      max-width: 600px; /* Keep a maximum width */
+      border-radius: 16px;
+      background-color: white;
+      color: black;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.30);
+      margin: auto; /* Center the container */
+      display: grid;
+      padding: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+      box-sizing: border-box;
+    }
+    
+  
+    .year{
+      padding-top: 50px;
+    }
+
+    .p{
+      font-size: var(--p-font);
+      font-weight: 400;
+    }
+    .experience h3{
+      font-weight: 590;
+      font-size: 20px;
+    }
+    .experience p2{
+      font-size: 13px;
+      font-weight: 350;
+      margin-top: 22%;
+
+    }
+    header {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--secondar-color);
+      padding: 13px 10%;
+      transition: 0.2s;
+    }
+    .logo {
+      font-size: 1.61rem;
+      font-weight: 600;
+      color: var(--secondary-color);
+    }
+    .navbar {
+      display: flex;
+    }
+    .navbar a {
+      font-size: 1rem;
+      padding: 10px 20px;
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    .navbar a:hover {
+      color: var(--hover);
+    }
+    #menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 10001;
+      display: none;
+    }
+    #darkmode {
+      font-size: 22px;
+      cursor: pointer;
+    }
+    .home {
+      width: 98%;
+      min-height: 98vh;
+      display: flex; /* Changed from grid to flex */
+      flex-direction: row; /* Align items in a row */
+      align-items: center; /* Center items vertically */
+      justify-content: flex-start; /* Align items to the left */
+      margin-left: 2%;
+    }
+
+    .home-img {
+      order: 1; /* Position the image first */
+      color: var(--secondary-color);
+      text-align: center; /* Center the image */
+      width: 50%; /* Adjust width as needed */
+    }
+
+    .home-img img {
+      width: 60%;
+      margin-bottom: 0.5rem; /* Reduce the space below the image */
+    }
+    .home-img img:hover {
+      transform: scale(1.1);
+      transition: 1s;
+    }
+    .home-text {
+      order: 2; /* Position the text second */
+      width: 50%; /* Adjust width as needed */
+      display: flex; /* Use flexbox for the text and button */
+      flex-direction: column; /* Stack text and button vertically */
+      justify-content: center; /* Center vertically */
+      
+    }
+    .home-text span {
+      font-size: var(--medium-font);
+      font-weight: 500;
+      margin: 0;
+    }
+    .home-text h1 {
+      font-size: 290%;
+      margin: 0; /* Remove margin to eliminate spacing */
+      padding: 0; /* Add padding: 0; to eliminate any padding */
+    }
+    
+    .home-text p {
+      font-size: var(--p-font);
+      font-weight: 300;
+      margin: 1.7rem 0 1rem;  
+    }
+    .btn {
+      display: inline-block;
+      background: var(--secondary-color);
+      color: var(--primary-color);
+      padding: 0.7rem 1.1rem;
+      border-radius: 0.5rem;
+    }
+    .home-text a {
+      display: inline-block;
+      background: var(--secondary-color);
+      color: var(--primary-color);
+      padding: 0.7rem 1.3rem;
+      border-radius: 0.5rem;
+    }
+    .about-container {
+      display: grid;
+      grid-template-columns: repeat(2, 6fr);
+      margin-top: 1rem;
+    }
+    .about-img {
+      overflow: hidden;
+      border-radius: 0.5rem;
+    }
+    .about-img img {
+      width: 70%;
+      margin-left: 11%;
+      margin-top: 30px;
+      border-radius: 0.5rem;
+    }
+    .about-img img:hover {
+      transform: scale(1.1);
+      transition: 2s;
+    }
+    .about-text p {
+      text-align: justify;
+      margin-top: 4%;
+      margin-right: 3%;
+      font-size: var(--p-font);
+    }
+    .information {
+      margin: 1rem 0 1.4rem;
+    }
+    .information .info-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.4rem;
+    }
+    .information .info-box a {
+      color: var(--secondary-color);
+    }
+    .information .info-box .bx {
+      font-size: 22px;
+    }
+    .information .info-box span {
+      font-weight: 400;
+      margin-left: 1rem;
+    }
+    .skills-container {
+      display: flex; /* Use flexbox to align items */
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+      width: 100%; /* Allow full width */
+      max-width: 600px; /* Set a maximum width to prevent it from being too wide */
+      height: 400px; /* Fixed height to prevent movement */
+      overflow: auto; /* Add scroll if content exceeds height */
+      margin: 20px auto; /* Center the container with auto left/right margins */
+      padding: 10px; /* Optional: add some padding inside the container */
+      margin-bottom: 0;
+  }
+  
+  /* Adjust the bars to fit within the skills container */
+  .bars {
+      display: flex; /* Use flexbox for the bars */
+      flex-direction: column; /* Stack bars vertically */
+      align-items: center; /* Center bars horizontally */
+      width: 100%; /* Full width */
+      overflow: hidden; /* Prevent overflow */
+  }
+  
+  /* Adjust the individual bars */
+  .bars-box {
+      width: 100%; /* Ensure full width */
+      padding: 10px; /* Adjust padding as needed */
+  }
+  
+  /* Adjust the parent container that holds the .recommendation-box and .skills-container */
+  .recommendations h1 {
+    order: 1; /* Ensure Projects appears first */
+      font-size: 66px; /* Adjust as necessary */
+      text-align: center;
+  }
+.recommendation-wrapper {
+  display: flex; /* Use flexbox to align children */
+  justify-content: space-between; /* Space between the children */
+}
+
+/* Update the .recommendation-box */
+.recommendation-box {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: justify;
+  color: black;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.30);
+  margin: 10px; /* Space around each box */
+  width: calc(90% - 20px); /* Decrease width */
+}
+
+.recommendation {
+  width: 100%; /* Full width */
+  overflow: hidden; /* Prevent overflow issues */
+  font-size: 65px;
+  text-align: center;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden; /* Only show one slide at a time */
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 90%;
+  margin: auto;
+}
+
+.slide {
+  flex: 0 0 100%; /* Each slide takes up 100% of the slider wrapper */
+  box-sizing: border-box;
+}
+
+.recommendation-wrapper {
+  width: 100%; /* Ensure it stretches across the container */
+}
+.recommendation-box {
+  background-color: rgb(255, 255, 255); /* Gray background */
+  border-radius: 8px; /* Optional: round corners */
+  padding: 20px; /* Adjust as necessary */
+  text-align: justify; /* Text alignment */
+  color: black; /* Text color */
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.30); /* Box shadow for depth */
+  margin: 10px; /* Space around each box */
+  width: calc(100% - 20px); /* Full width minus margin (left + right) */
+}
+.name-title {
+  margin-left: 10px; /* Space between the image and text */
+  display: le;
+  flex-direction: column; /* Stack name and title vertically */
+}
+.person-info {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  justify-content: flex-start; /* Align items to the left */
+}
+
+.profile-photo {
+  width: 60px; /* Set a fixed width */
+  height: 60px; /* Set a fixed height */
+  border-radius: 50%; /* Circular profile photo */
+  margin-right: 10px; /* Space between photo and name */
+}
+
+.name {
+  font-size: 1.2em; /* Adjust font size for visibility */
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+.title {
+  font-size: 0.7em; /* Slightly smaller font for title */
+  color: gray; /* Change color for differentiation */
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+
+.recommendation-text {
+    display: flex;
+    flex-direction: column; /* Stack name and text vertically */
+}
+  
+  span {
+      font-weight: bold;
+      font-size: 1.2em;
+  }
+  
+  .recommendation-box p {
+    padding-top: 1%;
+      text-align: justify;
+  }
+    .bars-box {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      margin-bottom: 1rem;
+    }
+    .bars-box h3, span {
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    .light-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.5rem;
+      background: hsla(0, 0%, 40%, 0.4);
+      border-radius: 0.5rem;
+    }
+    .percent-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 0.5rem;
+      background: var(--secondary-color);
+      border-radius: 0.5rem;
+    }
+    .html-bar {
+      width: 14%;
+    }
+    .css-bar {
+      width: 4%;
+    }
+    .js-bar {
+      width: 1%;
+    }
+    .react-bar {
+      width: 1%;
+    }
+    .portfolio-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .portfolio-img {
+      overflow: hidden;
+      border-radius: 0.5rem;
+    }
+    .portfolio-img img {
+      width: 100%;
+      display: block;
+    }
+    .portfolio-img img:hover {
+      transform: scale(1.1);
+      transition: 1s;
+    }
+    .touch {
+      margin-top: 4%;
+      margin-right: 3%;
+      font-size: var(--p-font);
+    }
+    .content-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0; /* Remove or reduce top margin */
+      font-size: var(--p-font);
+    }
+    .content-info a {
+    color: inherit; /* Use the parent element's color */
+    text-decoration: none; /* Remove underline */
+}
+
+.content-info a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover if needed */
+}
+
+    .information .info-box span {
+      font-weight: 400;
+      margin-left: 1rem;
+    }
+    @media (max-width: 1013px) {
+      header {
+        padding: 11px 4%;
+      }
+      .heading {
+        flex-direction: column; /* Ensure stacking in column direction */
+    }
+ 
+  .recommendation-box {
+      align-items: center;
+      text-align: center;
+      width: 95%; /* Adjust for smaller screens */
+  }
+
+  .person-info {
+      justify-content: center;
+  }
+
+    .heading h2 {
+        order: 1; /* Ensure Projects appears first */
+        font-size: 50px; /* Adjust as necessary */
+    }
+    .recommendations h1 {
+      order: 1; /* Ensure Projects appears first */
+        font-size: 25px; /* Adjust as necessary */
+        text-align: center;
+    }
+  
+    .heading span {
+        order: 2; /* Ensure Recent Projects appears second */
+        font-size: 1rem; /* Adjust for responsiveness */
+        }
+      #menu-icon {
+        display: initial;
+        color: var(--secondary-color);
+      }
+      header .navbar {
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--primary-color);
+        transition: 0.2s ease;
+        text-align: center;
+      }
+      .navbar.active {
+        top: 100%;
+      }
+      .heading {
+        text-align: center;
+        margin-top: 5%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+      }
+      .heading2 {
+        text-align: center;
+        margin-top: 5%;
+      }
+      .heading2 h2 {
+        font-size: 75 px;
+      }
+      .heading2 span {
+        font-size: 15;
+        color: var(--secondary-color);
+      }
+      .navbar a {
+        padding: 1.5rem;
+        display: block;
+        background: var(--primary-color);
+      }
+      #icon {
+        position: absolute;
+        top: 1.4rem;
+        right: 2rem;
+      }
+      .scroll-down {
+        display: none;
+      }
+      .content-info {
+        font-size: var(--p-font);
+        text-align: center;
+        margin: 1rem auto;
+        width: fit-content;
+      }
+      .home {
+        display: flex;
+        flex-direction: column; /* Arrange items in a column */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+      }
+    
+      .home-img {
+        order: 1; /* Image comes first */
+        width: auto; /* Keep original size */
+        flex: 0 0 auto; /* Prevent the image from shrinking */
+        text-align: center; /* Center the image */
+      }
+    
+      .home-img img {
+        width: 100%; /* Ensure it takes the full width of the container */
+        max-width: 500px; /* Set a maximum width to prevent it from becoming too large */
+      }
+    
+      .home-text {
+        order: 2; /* Text comes after the image */
+        width: auto; /* Keep natural size */
+        flex: 0 0 auto; /* Prevent the text from shrinking */
+        max-width: 600px; /* Set a maximum width for the text section */
+        text-align: left; /* Center the text */
+      }
+    .home-text-button {
+        margin-top: 1rem; /* Space between the text and button */
+    }
+      .home-img img:hover {
+        transform: scale(1.1);
+        transition: 1s;
+      }
+      .about-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .about-img {
+        width: 100%;
+      }
+      .about-img img:hover {
+        transform: scale(1.1);
+        transition: 1s;
+      }
+      .skills-img img {
+        padding-left: 0;
+      }
+      .skills-img {
+        padding-top: 2rem;
+        display: flex;
+        justify-content: center;
+      }
+      .contact-form form{
+        width: 300px;
+      }
+      .contact-button{
+        margin-left: 25%;
+        
+
+
+        
+      }@media (max-width: 656px) {
+    
+      
+        .experience {
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack items vertically */
+            align-items: flex-start; /* Align items to the start */
+            width: 100%; /* Full width */
+        }
+    
+        .year {
+            font-size: 1.5em; /* Reduce font size for year */
+            width: 100%; /* Full width */
+        }
+    
+        .coloryear {
+            width: 100%; /* Full width for colored year sections */
+        }
+    
+        .container {
+            flex-basis: 100%; /* Allow containers to take full width */
+            max-width: 90%; /* Ensure it takes up less space on smaller screens */
+            width: 100%; /* Allow full width on very small screens */
+
+        }
+  .recommendation-box {
+      align-items: center;
+      text-align: center;
+  }
+
+  .person-info {
+      justify-content: center;
+  }
+
+        .bars {
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack bars vertically */
+        }
+    
+        .bars-box {
+            width: 100%; /* Full width for bars */
+          
+        }
+    
+    .recommendation-box {
+        align-items: center;
+        text-align: center;
+    }
+
+    .person-info {
+        justify-content: center;
+    }
+        
+    }
+  }

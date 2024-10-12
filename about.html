@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💻 Contact - Henmyr Vincent Tepacia</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">HVTepacia</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Project</a></li>
+            <li><a href="experiences.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <img src="images/moon.png" id="icon">
+        </ul>
+    </header>
+    <section class="about" id="about">
+        <div class="heading">
+            <h2>About</h2>
+        </div>
+        <div class="about-container">
+            <div class="about-img">
+                <img src="images/121.jpg" alt="">
+            </div>
+            <div class="about-text">
+                <p>I’m a computer science student who loves coding and robotics, always seeking opportunities to work on projects like website development, mobile apps, and web apps, where I can continuously improve my skills and create innovative solutions.<br>
+                <br>I stay curious and make it a point to keep up with the latest technology trends, whether that involves learning new programming languages or diving into advancements in robotics, as I am eager to expand my knowledge and challenge myself.<br>
+                <br>Outside of coding, I find inspiration in minimalism, which helps me think creatively and approach problems with a clear and focused mindset, allowing me to develop effective solutions to the challenges I encounter.<p><br>
+                <br>
+                    <div class="information">
+                    <div class="info-box">
+                        <i class='bx bxs-phone' ></i>
+                        <span>+639 158 084 248</span>
+                    </div>
+                    <div class="info-box">
+                        <i class='bx bxs-envelope' ></i>
+                        <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNsvFNljcPbzHrgvPWQlGrgTGhHGhbPTFgNGqxCQbbpHzJRjQLPStXGKhDDZhBmgmfrCXV" target="_blank"><span>hvtepacia11@gmail.com</span></a>
+                    </div>
+                </div>
+                <a href="https://discord.gg/67Cx76KZhb" class="btn">Join my <b>Discord Community</b></a>
+            </section>
+        </div>
+        <script>
+             let menu = document.querySelector('#menu-icon');
+            let navbar = document.querySelector('.navbar'); 
+            menu.onclick = () => {
+                navbar.classList.toggle('active');
+            }
+             var icon = document.getElementById("icon");
+            if(localStorage.getItem("theme") == null){
+                localStorage.setItem("theme", "light");
+            }
+            let localData = localStorage.getItem("theme");
+            if(localData == "light"){
+                icon.src = "images/moon.png";
+                document.body.classList.remove("dark-theme");
+            }else if(localData == "dark"){
+                icon.src = "images/sun.png";
+                document.body.classList.add("dark-theme");
+            }     
+            icon.onclick = function(){
+                document.body.classList.toggle("dark-theme");
+                if(document.body.classList.contains("dark-theme")){
+                    icon.src = "images/sun.png";
+                    localStorage.setItem("theme", "dark");
+                }else{
+                    icon.src = "images/moon.png";
+                    localStorage.setItem("theme", "light");
+                }
+            }
+        
+            </script>
+            <style>
+                
+            </style>
+    </body>
+    </html>
